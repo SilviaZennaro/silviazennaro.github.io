@@ -78,3 +78,8 @@ blockquote {
 .work .year { color: #9aa4b2; font-size: 0.9rem; }
 .work .role-line { color: #6cb6ff; margin: 4px 0 8px; font-size: 0.9rem; }
 .work .info { color: #9aa4b2; margin: 0; font-size: 0.9rem; line-height: 1.5; }
+
+/* Photo gallery */
+.gallery { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; margin: 0 0 8px; }
+.gallery img { width: 100%; height: auto; display: block; border-radius: 8px; }
+.gallery img:first-child { grid-column: 1 / -1; }
