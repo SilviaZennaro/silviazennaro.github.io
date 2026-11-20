@@ -5,99 +5,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Silvia Zennaro — Video Editor & Director</title>
   <meta name="description" content="Portfolio of Silvia Zennaro, video editor and director. Short films, documentaries and web series.">
-  <meta name="theme-color" content="#061315">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="preload" href="fonts/bebas-neue.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+  <div class="progress" id="progress"></div>
   <header>
-    <h1><a href="index.html">Silvia Zennaro</a></h1>
+    <h1><a href="#top">Silvia Zennaro</a></h1>
     <nav>
       <a href="#work">Work</a>
+      <a href="#more">More work</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a class="cta" href="#contact">Let's talk</a>
     </nav>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
-      <p class="eyebrow">Video Editor &amp; Director</p>
-      <h2>Silvia<br><em>Zennaro</em></h2>
-      <p class="lead">Editing and directing short films, documentaries and web series.</p>
-      <div class="hero-links">
-        <a class="btn solid" href="#work">See the work</a>
-        <a class="btn" href="#contact">Get in touch</a>
+      <div class="hero-in" id="hero-in">
+        <p class="kicker">Portfolio · 2026</p>
+        <h2><span>Silvia</span><span>Zennaro</span></h2>
+        <p class="words">Editing<i>/</i>Directing<i>/</i>Storytelling</p>
+        <p class="lead">Video editor and director of short films, documentaries and web series.</p>
       </div>
-      <span class="tc" aria-hidden="true">TC 01:00:00:00</span>
+      <span class="scroll-cue">Scroll</span>
     </section>
 
-    <section class="block" id="work">
-      <h2><span class="n">01</span> Selected work</h2>
-      <div class="grid">
-      <a class="card" href="al-biciclar.html">
-        <img src="al-biciclar-poster.jpg" alt="Poster of Al Biciclàr">
-        <h3>Al Biciclàr</h3>
-        <p class="meta">2026 · Short film · Editor</p>
-      </a>
-      <a class="card" href="when-it-rains-inside.html">
-        <img src="cover.jpg" alt="Poster of When It Rains Inside">
-        <h3>When It Rains Inside</h3>
-        <p class="meta">2025 · Short film · Director & Writer</p>
-      </a>
-      <a class="card" href="jai.html">
-        <img src="jai-poster.jpg" alt="Poster of Jai">
-        <h3>Jai</h3>
-        <p class="meta">2025 · Short film · Co-director & Editor</p>
-      </a>
-      <a class="card" href="solo-a-jesolo.html">
-        <img src="solo-a-jesolo-poster.jpg" alt="Title card of Solo a Jesolo">
-        <h3>Solo a Jesolo</h3>
-        <p class="meta">2025 · Web series · Director & Editor</p>
-      </a>
-      <a class="card" href="orfeo.html">
-        <img src="orfeo-poster.jpg" alt="Poster of Orfeo">
-        <h3>Orfeo</h3>
-        <p class="meta">2025 · Short film · Editor</p>
-      </a>
-      <a class="card" href="la-stagione-dei-fiori.html">
-        <img src="la-stagione-dei-fiori-poster.jpg" alt="Poster of La stagione dei fiori">
-        <h3>La stagione dei fiori</h3>
-        <p class="meta">2024 · Short film · Editor</p>
-      </a>
-      <a class="card" href="il-prezzo-che-paghiamo.html">
-        <img src="il-prezzo-che-paghiamo-poster.jpg" alt="Poster of Il prezzo che paghiamo">
-        <h3>Il prezzo che paghiamo</h3>
-        <p class="meta">2024 · Documentary · Assistant Editor</p>
-      </a>
-      <a class="card" href="solstizio.html">
-        <img src="solstizio-poster.jpg" alt="Poster of Solstizio">
-        <h3>Solstizio</h3>
-        <p class="meta">2024 · Short film · Editor</p>
-      </a>
-      <a class="card" href="fuori-servizio.html">
-        <img src="fuori-servizio-poster.jpg" alt="Poster of Fuori servizio">
-        <h3>Fuori servizio</h3>
-        <p class="meta">2023 · Short film · Editor</p>
-      </a>
-      <a class="card" href="il-gioco-delle-sedie.html">
-        <img src="il-gioco-delle-sedie-poster.jpg" alt="Poster of Il gioco delle sedie">
-        <h3>Il gioco delle sedie</h3>
-        <p class="meta">2023 · Short film · Editor</p>
-      </a>
-      <a class="card" href="mia.html">
-        <img src="mia-poster.jpg" alt="Poster of Mia">
-        <h3>Mia</h3>
-        <p class="meta">2023 · Short film · Editor</p>
-      </a>
-      <a class="card" href="con-l-aiuto-di-dio.html">
-        <img src="con-l-aiuto-di-dio-poster.jpg" alt="Poster of Con l'aiuto di Dio">
-        <h3>Con l'aiuto di Dio</h3>
-        <p class="meta">2023 · Documentary · Assistant Editor</p>
-      </a>
+    <section id="work">
+      <div class="work-head">
+        <span class="chip">01 — Work</span>
+        <h2>Selected works</h2>
+      </div>
+      <div class="story" id="story" style="--n:12">
+        <div class="stage">
+        <article class="slide">
+          <div class="text">
+            <span class="num">01 &nbsp;/&nbsp; 2026</span>
+            <h3>Al Biciclàr</h3>
+            <p class="tags">Short film &nbsp;·&nbsp; <b>Editor</b></p>
+            <a class="btn" href="al-biciclar.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="al-biciclar.html" tabindex="-1" aria-hidden="true"><img src="al-biciclar-poster.jpg" alt="Poster of Al Biciclàr"></a>
+        </article>
+        <article class="slide">
+          <div class="text">
+            <span class="num">02 &nbsp;/&nbsp; 2025</span>
+            <h3>When It Rains Inside</h3>
+            <p class="tags">Short film &nbsp;·&nbsp; <b>Director &amp; Writer</b></p>
+            <a class="btn" href="when-it-rains-inside.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="when-it-rains-inside.html" tabindex="-1" aria-hidden="true"><img src="cover.jpg" alt="Poster of When It Rains Inside"></a>
+        </article>
+        <article class="slide">
+          <div class="text">
+            <span class="num">03 &nbsp;/&nbsp; 2025</span>
+            <h3>Jai</h3>
+            <p class="tags">Short film &nbsp;·&nbsp; <b>Co-director &amp; Editor</b></p>
+            <a class="btn" href="jai.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="jai.html" tabindex="-1" aria-hidden="true"><img src="jai-poster.jpg" alt="Poster of Jai"></a>
+        </article>
+        <article class="slide">
+          <div class="text">
+            <span class="num">04 &nbsp;/&nbsp; 2025</span>
+            <h3>Solo a Jesolo</h3>
+            <p class="tags">Web series &nbsp;·&nbsp; <b>Director &amp; Editor</b></p>
+            <a class="btn" href="solo-a-jesolo.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="solo-a-jesolo.html" tabindex="-1" aria-hidden="true"><img src="solo-a-jesolo-poster.jpg" alt="Title card of Solo a Jesolo"></a>
+        </article>
+        <article class="slide">
+          <div class="text">
+            <span class="num">05 &nbsp;/&nbsp; 2025</span>
+            <h3>Orfeo</h3>
+            <p class="tags">Short film &nbsp;·&nbsp; <b>Editor</b></p>
+            <a class="btn" href="orfeo.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="orfeo.html" tabindex="-1" aria-hidden="true"><img src="orfeo-poster.jpg" alt="Poster of Orfeo"></a>
+        </article>
+        <article class="slide">
+          <div class="text">
+            <span class="num">06 &nbsp;/&nbsp; 2024</span>
+            <h3>La stagione dei fiori</h3>
+            <p class="tags">Short film &nbsp;·&nbsp; <b>Editor</b></p>
+            <a class="btn" href="la-stagione-dei-fiori.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="la-stagione-dei-fiori.html" tabindex="-1" aria-hidden="true"><img src="la-stagione-dei-fiori-poster.jpg" alt="Poster of La stagione dei fiori"></a>
+        </article>
+        <article class="slide">
+          <div class="text">
+            <span class="num">07 &nbsp;/&nbsp; 2024</span>
+            <h3>Il prezzo che paghiamo</h3>
+            <p class="tags">Documentary &nbsp;·&nbsp; <b>Assistant Editor</b></p>
+            <a class="btn" href="il-prezzo-che-paghiamo.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="il-prezzo-che-paghiamo.html" tabindex="-1" aria-hidden="true"><img src="il-prezzo-che-paghiamo-poster.jpg" alt="Poster of Il prezzo che paghiamo"></a>
+        </article>
+        <article class="slide">
+          <div class="text">
+            <span class="num">08 &nbsp;/&nbsp; 2024</span>
+            <h3>Solstizio</h3>
+            <p class="tags">Short film &nbsp;·&nbsp; <b>Editor</b></p>
+            <a class="btn" href="solstizio.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="solstizio.html" tabindex="-1" aria-hidden="true"><img src="solstizio-poster.jpg" alt="Poster of Solstizio"></a>
+        </article>
+        <article class="slide">
+          <div class="text">
+            <span class="num">09 &nbsp;/&nbsp; 2023</span>
+            <h3>Fuori servizio</h3>
+            <p class="tags">Short film &nbsp;·&nbsp; <b>Editor</b></p>
+            <a class="btn" href="fuori-servizio.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="fuori-servizio.html" tabindex="-1" aria-hidden="true"><img src="fuori-servizio-poster.jpg" alt="Poster of Fuori servizio"></a>
+        </article>
+        <article class="slide">
+          <div class="text">
+            <span class="num">10 &nbsp;/&nbsp; 2023</span>
+            <h3>Il gioco delle sedie</h3>
+            <p class="tags">Short film &nbsp;·&nbsp; <b>Editor</b></p>
+            <a class="btn" href="il-gioco-delle-sedie.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="il-gioco-delle-sedie.html" tabindex="-1" aria-hidden="true"><img src="il-gioco-delle-sedie-poster.jpg" alt="Poster of Il gioco delle sedie"></a>
+        </article>
+        <article class="slide">
+          <div class="text">
+            <span class="num">11 &nbsp;/&nbsp; 2023</span>
+            <h3>Mia</h3>
+            <p class="tags">Short film &nbsp;·&nbsp; <b>Editor</b></p>
+            <a class="btn" href="mia.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="mia.html" tabindex="-1" aria-hidden="true"><img src="mia-poster.jpg" alt="Poster of Mia"></a>
+        </article>
+        <article class="slide">
+          <div class="text">
+            <span class="num">12 &nbsp;/&nbsp; 2023</span>
+            <h3>Con l'aiuto di Dio</h3>
+            <p class="tags">Documentary &nbsp;·&nbsp; <b>Assistant Editor</b></p>
+            <a class="btn" href="con-l-aiuto-di-dio.html">View project →</a>
+          </div>
+          <a class="poster-wrap" href="con-l-aiuto-di-dio.html" tabindex="-1" aria-hidden="true"><img src="con-l-aiuto-di-dio-poster.jpg" alt="Poster of Con l'aiuto di Dio"></a>
+        </article>
+          <div class="counter" id="counter">01 <small>/ 12</small></div>
+          <div class="dots" id="dots"></div>
+        </div>
       </div>
     </section>
 
-    <section class="block">
-      <h2><span class="n">02</span> More work</h2>
+    <section class="block" id="more">
+      <span class="chip">02 — More work</span>
+      <h2>And also</h2>
     <ul class="work">
       <li><div class="top"><span class="title">Vasco Live</span><span class="year">2026</span></div><p class="role-line">Editor</p><p class="info">Short documentary, Ferrara</p></li>
       <li><div class="top"><span class="title">Visit Emilia Romagna</span><span class="year">2026</span></div><p class="role-line">Editor</p><p class="info">Tourism commercial produced for RAI</p></li>
@@ -112,12 +171,14 @@
     </section>
 
     <section class="block" id="showreel">
-      <h2><span class="n">03</span> Showreel</h2>
+      <span class="chip">03 — Showreel</span>
+      <h2>Showreel</h2>
       <div class="reel">Showreel coming soon</div>
     </section>
 
     <section class="block" id="about">
-      <h2><span class="n">04</span> About</h2>
+      <span class="chip">04 — About</span>
+      <h2>About</h2>
       <div class="about">
         <div>
           <p class="big">Film editor and director with experience in short films, documentaries and web series.</p>
@@ -136,7 +197,7 @@
           </div>
           <div>
             <h4>Tools</h4>
-            <div class="tags">
+            <div class="tags-row">
               <span>DaVinci Resolve</span><span>Adobe Premiere Pro</span><span>Avid Media Composer</span>
               <span>Photoshop</span><span>Lightroom</span><span>Illustrator</span><span>InDesign</span>
             </div>
@@ -154,8 +215,8 @@
     </section>
 
     <section class="block contact" id="contact">
-      <h2><span class="n">05</span> Contact</h2>
-      <p class="big">Let's make something <em>together.</em></p>
+      <span class="chip">05 — Contact</span>
+      <p class="big">Let's make something together</p>
       <p>Email and social links coming soon.</p>
     </section>
   </main>
@@ -166,16 +227,78 @@
   </footer>
 
   <script>
-    // Gentle fade-in on scroll (content stays visible if JS is off)
-    (function () {
-      var els = document.querySelectorAll('.card, .work li, .about > div, .reel, .contact > *');
-      if (!('IntersectionObserver' in window)) return;
+  (function () {
+    var $ = function (s, c) { return (c || document).querySelector(s); };
+    var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var story = $('#story'), slides = $$('.slide', story), n = slides.length;
+    var counter = $('#counter'), dotsBox = $('#dots'), hero = $('#hero-in'), bar = $('#progress');
+    story.style.setProperty('--n', n);
+
+    // side dots
+    var dots = slides.map(function (s, i) {
+      var b = document.createElement('button');
+      b.setAttribute('aria-label', 'Go to project ' + (i + 1));
+      b.addEventListener('click', function () { goTo(i); });
+      dotsBox.appendChild(b); return b;
+    });
+    function storyTop() { return window.scrollY + story.getBoundingClientRect().top; }
+    function span() { return story.offsetHeight - window.innerHeight; }
+    function goTo(i) {
+      window.scrollTo({ top: storyTop() + ((i + 0.5) / n) * span(), behavior: reduce ? 'auto' : 'smooth' });
+    }
+
+    // nav scrollspy
+    var links = $$('nav a[href^="#"]').filter(function (a) { return !a.classList.contains('cta'); });
+    var secs = links.map(function (a) { return $(a.getAttribute('href')); });
+
+    var current = -1;
+    function update() {
+      var y = window.scrollY, vh = window.innerHeight;
+      // progress bar
+      var max = document.documentElement.scrollHeight - vh;
+      bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
+      // hero fade
+      if (!reduce) {
+        var f = Math.min(1, y / (vh * 0.8));
+        hero.style.opacity = 1 - f;
+        hero.style.transform = 'translateY(' + (y * 0.25) + 'px) scale(' + (1 - f * 0.06) + ')';
+      }
+      // story
+      var p = Math.max(0, Math.min(0.9999, -story.getBoundingClientRect().top / span()));
+      var idx = Math.floor(p * n);
+      if (idx !== current) {
+        current = idx;
+        slides.forEach(function (s, i) {
+          s.classList.toggle('active', i === idx);
+          s.classList.toggle('past', i < idx);
+        });
+        dots.forEach(function (d, i) { d.classList.toggle('on', i === idx); });
+        counter.innerHTML = String(idx + 1).padStart(2, '0') + ' <small>/ ' + String(n).padStart(2, '0') + '</small>';
+      }
+      // scrollspy
+      var active = -1;
+      secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top < vh * 0.45) active = i; });
+      links.forEach(function (a, i) { a.classList.toggle('on', i === active); });
+    }
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(function () { update(); ticking = false; }); }
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+
+    // gentle reveal for the rest of the page
+    if ('IntersectionObserver' in window) {
+      var els = $$('.chip, #more h2, #showreel h2, #about h2, .work li, .about > div, .reel, .contact > *, .work-head h2');
       els.forEach(function (el) { el.classList.add('reveal'); });
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
       }, { rootMargin: '0px 0px -8% 0px' });
       els.forEach(function (el) { io.observe(el); });
-    })();
+    }
+  })();
   </script>
 </body>
 </html>
