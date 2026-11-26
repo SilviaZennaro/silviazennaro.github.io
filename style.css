@@ -422,3 +422,19 @@ button.btn { cursor: pointer; font-family: var(--sans); }
 }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .14; mix-blend-mode: screen; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 .hero h2 { font-size: clamp(3.4rem, 9vw, 8.5rem); line-height: .9; letter-spacing: .03em; }
+
+/* quieter, elegant titles and softer corners */
+.sec > h2, .flow .head-wrap > h2 { font-size: clamp(2.2rem, 4.5vw, 3.6rem); line-height: .95; letter-spacing: .03em; }
+.cat-top h2, #cat-comm .cat-top h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: .95; letter-spacing: .03em; }
+.cat-top .count { font-size: clamp(1rem, 1.6vw, 1.3rem); }
+.project h3, .reels-head h3 { font-size: clamp(2.2rem, 4.5vw, 3.6rem); line-height: .95; letter-spacing: .03em; }
+.sub-head h3 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+.contact .contact-box .big { font-size: clamp(2.2rem, 4vw, 3rem); }
+.bio-text .big { font-size: clamp(1.7rem, 2.6vw, 2.3rem); }
+.tcard .ph, .card .ph, .poster img, .portrait img, .reel-item { border-radius: 16px; }
+.video, .reel, .gallery img { border-radius: 16px; }
+.reel { overflow: hidden; }
+.set-grid img, .tcard.np { border-radius: 12px; }
+.contact-box { border-radius: 24px; }
+#lightbox .lb-box { border-radius: 22px; }
+#lightbox img, #lightbox video { border-radius: 14px; }
