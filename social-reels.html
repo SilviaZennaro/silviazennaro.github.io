@@ -6,7 +6,7 @@
   <title>Social Reels — Silvia Zennaro</title>
   <meta name="description" content="Vertical social media reels for restaurants, pubs and hotels in Ireland, edited by Silvia Zennaro.">
   <meta name="theme-color" content="#0b0b0c">
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
   <header>
@@ -101,6 +101,25 @@
     (function () {
       var items = [].slice.call(document.querySelectorAll('.reel-item'));
       var box = document.getElementById('lightbox');
+      // with a mouse, a reel starts playing (muted) while the cursor is on it
+      if (window.matchMedia('(hover: hover)').matches) {
+        items.forEach(function (a) {
+          var peek = null;
+          function stop() { if (peek) { peek.pause(); peek.removeAttribute('src'); peek.load(); peek.remove(); peek = null; } }
+          a.addEventListener('mouseenter', function () {
+            stop();
+            peek = document.createElement('video');
+            peek.muted = true; peek.loop = true; peek.playsInline = true;
+            peek.setAttribute('aria-hidden', 'true');
+            peek.addEventListener('playing', function () { this.classList.add('on'); });
+            peek.src = a.getAttribute('href');
+            a.insertBefore(peek, a.querySelector('span'));
+            var p = peek.play(); if (p) p.catch(function () {});
+          });
+          a.addEventListener('mouseleave', stop);
+          a.addEventListener('click', stop);
+        });
+      }
       if (!box.showModal) return;   // old browsers just open the file
       var video = box.querySelector('video'), count = box.querySelector('.lb-count'), at = 0;
       function show(i) {
