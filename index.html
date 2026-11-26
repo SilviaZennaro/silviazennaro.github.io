@@ -186,7 +186,8 @@
         <div class="head-wrap">
           <span class="chip rv">02 — Showreel</span>
           <h2 class="rv">Showreel</h2>
-          <div class="reel rv">Showreel coming soon</div>
+          <div class="reel rv"><iframe src="https://www.youtube-nocookie.com/embed/8YOSUMAj_lc?rel=0" title="Silvia Zennaro — Video Editor Showreel 2025" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <p class="reel-link"><a href="https://youtu.be/8YOSUMAj_lc" target="_blank" rel="noopener">Watch on YouTube ↗</a></p>
         </div>
       </section>
 
@@ -259,7 +260,33 @@
         <div class="head-wrap">
           <span class="chip rv">04 — Contact</span>
           <p class="big rv">Let's make something together</p>
-          <p class="rv">Based in Zurich, Switzerland. Available for projects worldwide.<br>Email and social links coming soon.</p>
+          <p class="rv">Based in Zurich, Switzerland. Available for projects worldwide.</p>
+          <div class="contact-grid rv">
+            <form id="contact-form">
+              <div class="row">
+                <label class="field"><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
+                <label class="field"><span>Your email</span><input type="email" name="email" autocomplete="email" required></label>
+              </div>
+              <fieldset>
+                <legend>Type of project</legend>
+                <label><input type="radio" name="type" value="Film"><span>Film</span></label>
+                <label><input type="radio" name="type" value="Documentary"><span>Documentary</span></label>
+                <label><input type="radio" name="type" value="Series"><span>Series</span></label>
+                <label><input type="radio" name="type" value="Commercial"><span>Commercial</span></label>
+                <label><input type="radio" name="type" value="Music video"><span>Music video</span></label>
+                <label><input type="radio" name="type" value="Other"><span>Other</span></label>
+              </fieldset>
+              <label class="field"><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+              <button class="btn solid" type="submit">Send message</button>
+              <p class="hint">Opens your email app with the message ready to send.</p>
+            </form>
+            <ul class="contact-links">
+              <li><span>Email</span><a href="mailto:zennarosilvia1@gmail.com">zennarosilvia1@gmail.com</a></li>
+              <li><span>Phone</span><a href="tel:+393925193180">+39 392 519 3180</a></li>
+              <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/silviazennaro" target="_blank" rel="noopener">in/silviazennaro ↗</a></li>
+              <li><span>Showreel</span><a href="https://youtu.be/8YOSUMAj_lc" target="_blank" rel="noopener">Watch on YouTube ↗</a></li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -346,6 +373,16 @@
     }, { passive: true });
     update();
   })();
+  </script>
+  <script>
+  /* contact form: GitHub Pages cannot send mail, so hand the message to the visitor's email app */
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = new FormData(e.target), type = f.get('type');
+    var subject = 'Portfolio enquiry' + (type ? ' · ' + type : '') + ' · ' + f.get('name');
+    var body = f.get('message') + '\n\n' + f.get('name') + '\n' + f.get('email');
+    window.location.href = 'mailto:zennarosilvia1@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
   </script>
 </body>
 </html>
