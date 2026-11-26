@@ -347,3 +347,11 @@ header { background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: 
 #cat-comm .cat-top h2 { font-size: clamp(2.8rem, 7.2vw, 7.5rem); }
 .cat { --ph: min(46svh, 500px, calc(100svh - 370px)); }
 @media (max-width: 700px) { .cat { --ph: min(46svh, 400px, calc(100svh - 360px)); } #cat-comm .cat-top h2 { font-size: clamp(2.8rem, 14vw, 4.6rem); } }
+/* episode buttons */
+.episodes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 600px) { .episodes { grid-template-columns: 1fr 1fr; } }
+.episodes a { display: flex; align-items: baseline; gap: 14px; padding: 13px 18px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; color: var(--text); font-size: .94rem; line-height: 1.35; transition: background .2s, color .2s, border-color .2s; }
+.episodes a span { flex: 0 0 auto; font: 600 .7rem/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.episodes a:hover { background: var(--text); border-color: var(--text); color: var(--bg); }
+.episodes a:hover span { color: var(--bg); }
+.project .btn.solid:hover { color: #000; }
