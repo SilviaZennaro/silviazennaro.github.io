@@ -7,7 +7,7 @@
   <meta name="description" content="Silvia Zennaro, Italian video editor and director based in Zurich. Fiction, documentary and commercial work. Available worldwide.">
   <meta name="theme-color" content="#0b0b0c">
   <link rel="preload" href="fonts/bebas-neue.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -372,11 +372,15 @@
   });
   </script>
   <dialog id="lightbox" aria-label="Photo viewer">
-    <img alt="">
-    <button type="button" class="lb-close" aria-label="Close">&times;</button>
-    <button type="button" class="lb-prev" aria-label="Previous photo">&lsaquo;</button>
-    <button type="button" class="lb-next" aria-label="Next photo">&rsaquo;</button>
-    <p class="lb-count" aria-live="polite"></p>
+    <div class="lb-box">
+      <img alt="">
+      <div class="lb-bar">
+        <button type="button" class="lb-prev" aria-label="Previous photo">&lsaquo;</button>
+        <p class="lb-count" aria-live="polite"></p>
+        <button type="button" class="lb-next" aria-label="Next photo">&rsaquo;</button>
+        <button type="button" class="lb-close">Close &times;</button>
+      </div>
+    </div>
   </dialog>
 
   <script>
@@ -398,9 +402,10 @@
     });
     box.addEventListener("close", function () { document.documentElement.style.overflow = ""; });
     box.addEventListener("click", function (e) {
-      if (e.target.classList.contains("lb-prev")) show(i - 1);
-      else if (e.target.classList.contains("lb-next") || e.target === big) show(i + 1);
-      else box.close();
+      var t = e.target;
+      if (t.classList.contains("lb-prev")) show(i - 1);
+      else if (t.classList.contains("lb-next") || t === big) show(i + 1);
+      else if (t === box || t.classList.contains("lb-close")) box.close();
     });
     box.addEventListener("keydown", function (e) {
       if (e.key === "ArrowLeft") show(i - 1);
