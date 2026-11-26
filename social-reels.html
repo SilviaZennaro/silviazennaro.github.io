@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Reels — Silvia Zennaro</title>
+  <meta name="description" content="Vertical social media reels for restaurants, pubs and hotels in Ireland, edited by Silvia Zennaro.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Silvia Zennaro</a></h1>
+    <nav>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a class="cta" href="index.html#contact">Let's talk</a>
+    </nav>
+  </header>
+
+  <main>
+    <a class="back" href="index.html">← All projects</a>
+
+    <section class="reels-head">
+      <h3>Social Reels</h3>
+      <p>Vertical videos for restaurants, pubs and hotels in Ireland · 2025<br>Edited by Silvia Zennaro</p>
+    </section>
+
+    <div class="reels">
+      <figure>
+        <video src="reel-cow-1.mp4" poster="reel-cow-1.jpg" controls playsinline preload="none" aria-label="The Cow Pub &amp; Kitchen, reel 1"></video>
+        <figcaption><h4>The Cow Pub &amp; Kitchen</h4><p>Dublin</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-cow-2.mp4" poster="reel-cow-2.jpg" controls playsinline preload="none" aria-label="The Cow Pub &amp; Kitchen, reel 2"></video>
+        <figcaption><h4>The Cow Pub &amp; Kitchen</h4><p>Dublin</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-cow-3.mp4" poster="reel-cow-3.jpg" controls playsinline preload="none" aria-label="The Cow Pub &amp; Kitchen, reel 3"></video>
+        <figcaption><h4>The Cow Pub &amp; Kitchen</h4><p>Dublin</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-cow-4.mp4" poster="reel-cow-4.jpg" controls playsinline preload="none" aria-label="The Cow Pub &amp; Kitchen, reel 4"></video>
+        <figcaption><h4>The Cow Pub &amp; Kitchen</h4><p>Dublin</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-nhd-1.mp4" poster="reel-nhd-1.jpg" controls playsinline preload="none" aria-label="Neighbourhood, reel 1"></video>
+        <figcaption><h4>Neighbourhood</h4><p>Restaurant · Naas</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-nhd-2.mp4" poster="reel-nhd-2.jpg" controls playsinline preload="none" aria-label="Neighbourhood, reel 2"></video>
+        <figcaption><h4>Neighbourhood</h4><p>Restaurant · Naas</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-nhd-3.mp4" poster="reel-nhd-3.jpg" controls playsinline preload="none" aria-label="Neighbourhood, reel 3"></video>
+        <figcaption><h4>Neighbourhood</h4><p>Restaurant · Naas</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-nhd-4.mp4" poster="reel-nhd-4.jpg" controls playsinline preload="none" aria-label="Neighbourhood, reel 4"></video>
+        <figcaption><h4>Neighbourhood</h4><p>Restaurant · Naas</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-caffe-1.mp4" poster="reel-caffe-1.jpg" controls playsinline preload="none" aria-label="Caffè 500, reel 1"></video>
+        <figcaption><h4>Caffè 500</h4><p>Dublin</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-caffe-2.mp4" poster="reel-caffe-2.jpg" controls playsinline preload="none" aria-label="Caffè 500, reel 2"></video>
+        <figcaption><h4>Caffè 500</h4><p>Dublin</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-morrison-1.mp4" poster="reel-morrison-1.jpg" controls playsinline preload="none" aria-label="Morrison Hotel reel"></video>
+        <figcaption><h4>Morrison Hotel</h4><p>Dublin</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-dws-1.mp4" poster="reel-dws-1.jpg" controls playsinline preload="none" aria-label="Dawson Street reel"></video>
+        <figcaption><h4>Dawson Street</h4><p>Dublin</p></figcaption>
+      </figure>
+      <figure>
+        <video src="reel-marco-1.mp4" poster="reel-marco-1.jpg" controls playsinline preload="none" aria-label="Marco reel"></video>
+        <figcaption><h4>Marco</h4><p>Donnybrook · Dublin</p></figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <span>© 2026 Silvia Zennaro</span>
+    <span>Video Editor &amp; Director</span>
+  </footer>
+  <script>
+    // one reel at a time
+    document.addEventListener('play', function (e) {
+      document.querySelectorAll('.reels video').forEach(function (v) { if (v !== e.target) v.pause(); });
+    }, true);
+  </script>
+</body>
+</html>
